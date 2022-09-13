@@ -8,8 +8,8 @@ parser.add_argument('-p', '--participant')
 
 if __name__ == '__main__':
     args = parser.parse_args()
-    if args.participants:
-        phone_no = args.participants
+    if args.participant:
+        phone_no = args.participant
         consumer = KafkaConsumer(
             phone_no,
             bootstrap_servers=['localhost:9092'],
